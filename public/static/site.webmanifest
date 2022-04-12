@@ -1,0 +1,7 @@
+{
+  "name": "2048 Game",
+  "short_name": "2048",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

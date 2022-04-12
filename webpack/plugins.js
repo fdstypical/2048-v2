@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const DotEnv = require("dotenv-webpack");
 const webpack = require("webpack");
 
@@ -17,6 +18,9 @@ const generalPlugins = [
   new ForkTsCheckerWebpackPlugin(),
   new SpriteLoaderPlugin({ plainSprite: true }),
   new DotEnv(),
+  new CopyPlugin({
+    patterns: [{ from: path.join(__dirname, "../", "public/static") }],
+  }),
 ];
 
 const plugins = {
