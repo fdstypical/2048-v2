@@ -1,0 +1,27 @@
+@require '../vars/variables.styl';
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+  font-family: $font-base;
+  font-size: $font-size;
+  line-height: 1.25;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg[aria-hidden=true] {
+  display: none;
+}
+
+.l-container {
+  container();
+
+  &--fluid {
+    container(true);
+  }
+}
